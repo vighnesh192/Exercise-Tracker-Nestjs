@@ -15,7 +15,7 @@ export class ExercisesService {
         const exercise = new this.ExerciseModel({
             description,
             duration,
-            date: date ? date : new Date().toDateString(),
+            date: date ? new Date(date).toDateString() : new Date().toDateString(),
             userId
         })
 
